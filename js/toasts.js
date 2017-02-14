@@ -22,6 +22,7 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
   newToast.style.opacity = 0;
 
   // Animate toast in
+  if (!Vel) var Vel = $.Velocity;
   Vel(newToast, {translateY: '-35px',  opacity: 1 }, {duration: 300,
     easing: 'easeOutCubic',
     queue: false});
